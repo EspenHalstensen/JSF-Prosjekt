@@ -4,6 +4,7 @@
  */
 public class Treningsokt {
     // asd
+    boolean norsk = true;
     private int oktnr;
     private String dato;
     private int varighet;
@@ -23,7 +24,8 @@ public class Treningsokt {
     public void setOktnr(int oktnr) {
         this.oktnr = oktnr;
     }
-
+    
+    
     /**
      * @return the dato
      */
@@ -71,5 +73,20 @@ public class Treningsokt {
      */
     public void setTekst(String tekst) {
         this.tekst = tekst;
+    }
+    
+    public void setSpraak(String sprak){
+        if(sprak.equals("norsk")){
+            norsk = true;
+        }else{
+            norsk = false;
+        }
+    }
+    public String getSprak(){
+        if(norsk){
+            return "norsk";
+        }else{
+            return "engelsk";
+        }
     }
 }
